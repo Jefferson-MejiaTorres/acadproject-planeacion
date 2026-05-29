@@ -129,30 +129,3 @@ export default async function PerfilPage() {
     </div>
   )
 }
-              </div>
-              <div className="p-4 rounded-lg bg-muted/50">
-                <dt className="text-sm text-muted-foreground">Correo electrónico</dt>
-                <dd className="font-medium mt-1">{user?.email}</dd>
-              </div>
-              <div className="p-4 rounded-lg bg-muted/50">
-                <dt className="text-sm text-muted-foreground">Estado de la cuenta</dt>
-                <dd className="font-medium mt-1 flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-green-500" />
-                  Activa
-                </dd>
-              </div>
-              <div className="p-4 rounded-lg bg-muted/50">
-                <dt className="text-sm text-muted-foreground">Miembro desde</dt>
-                <dd className="font-medium mt-1">
-                  {user?.createdAt
-                    ? format(new Date(user.createdAt), "d 'de' MMMM, yyyy", { locale: es })
-                    : "N/A"}
-                </dd>
-              </div>
-            </dl>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
-}
