@@ -2,9 +2,21 @@ import { getProjects } from "@/app/actions/actions"
 import { ProjectCard } from "@/components/proyectos/project-card"
 import { CreateProjectDialog } from "@/components/proyectos/create-project-dialog"
 import { FolderKanban } from "lucide-react"
+import { mockProjects } from "@/lib/mock-data"
 
 export default async function ProyectosPage() {
-  const projects = await getProjects()
+  const isMockMode = process.env.NEXT_PUBLIC_MOCK_AUTH === "true"
+  
+  let projects = mockProjects
+
+  if (!isMockMode) {
+    try {
+      projects = await getProjects()
+    } catch (error) {
+      console.error("Error fetching projects:", error)
+      // Fallback a mock data
+    }
+  }
 
   return (
     <div className="p-6 lg:p-8 space-y-6">
@@ -14,6 +26,11 @@ export default async function ProyectosPage() {
           <p className="text-muted-foreground">
             Gestiona y organiza tus proyectos académicos
           </p>
+          {isMockMode && (
+            <p className="text-xs text-yellow-600 mt-2">
+              🎭 Modo de prueba - Usando datos de demostración
+            </p>
+          )}
         </div>
         <CreateProjectDialog />
       </div>

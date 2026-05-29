@@ -4,6 +4,7 @@ import { getProject, getTasks } from "@/app/actions/actions"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { TasksClient } from "@/components/tareas/tasks-client"
+import { mockProjects, mockTasks, mockMembers } from "@/lib/mock-data"
 
 export default async function TareasPage({
   params,
@@ -11,15 +12,28 @@ export default async function TareasPage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
+  const isMockMode = process.env.NEXT_PUBLIC_MOCK_AUTH === "true"
 
   let project
   let tasks
+  let members = mockMembers
 
-  try {
-    project = await getProject(id)
-    tasks = await getTasks(id)
-  } catch {
-    notFound()
+  if (isMockMode) {
+    // Modo mock
+    project = mockProjects.find((p) => p.id === id)
+    tasks = mockTasks.filter((t) => t.projectId === id)
+    
+    if (!project) {
+      notFound()
+    }
+  } else {
+    // Modo real
+    try {
+      project = await getProject(id)
+      tasks = await getTasks(id)
+    } catch {
+      notFound()
+    }
   }
 
   return (
@@ -35,10 +49,15 @@ export default async function TareasPage({
           <p className="text-muted-foreground">
             Arrastra y suelta las tareas para cambiar su estado
           </p>
+          {isMockMode && (
+            <p className="text-xs text-yellow-600 mt-2">
+              🎭 Modo de prueba - Usando datos de demostración
+            </p>
+          )}
         </div>
       </div>
 
-      <TasksClient tasks={tasks} projectId={id} members={project.members} />
+      <TasksClient tasks={tasks} projectId={id} members={members} />
     </div>
   )
 }
