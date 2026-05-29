@@ -9,6 +9,37 @@ export const mockUser = {
   updatedAt: new Date(),
 }
 
+export const mockMembers = [
+  {
+    id: "member_1",
+    name: "Jefferson Mejia",
+    email: "jefferson@example.com",
+    role: "líder",
+    avatar: "JM",
+  },
+  {
+    id: "member_2",
+    name: "Carlos García",
+    email: "carlos@example.com",
+    role: "colaborador",
+    avatar: "CG",
+  },
+  {
+    id: "member_3",
+    name: "María López",
+    email: "maria@example.com",
+    role: "colaborador",
+    avatar: "ML",
+  },
+  {
+    id: "member_4",
+    name: "Juan Rodriguez",
+    email: "juan@example.com",
+    role: "revisor",
+    avatar: "JR",
+  },
+]
+
 export const mockProjects = [
   {
     id: "proj_1",
@@ -18,7 +49,9 @@ export const mockProjects = [
     createdBy: "user_1",
     createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
     updatedAt: new Date(),
-    members: 4,
+    members: mockMembers.slice(0, 3),
+    taskCount: 3,
+    completedTasks: 1,
   },
   {
     id: "proj_2",
@@ -28,7 +61,9 @@ export const mockProjects = [
     createdBy: "user_1",
     createdAt: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000),
     updatedAt: new Date(),
-    members: 3,
+    members: mockMembers.slice(0, 2),
+    taskCount: 2,
+    completedTasks: 1,
   },
   {
     id: "proj_3",
@@ -38,7 +73,9 @@ export const mockProjects = [
     createdBy: "user_1",
     createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
     updatedAt: new Date(),
-    members: 5,
+    members: mockMembers,
+    taskCount: 0,
+    completedTasks: 0,
   },
 ]
 
@@ -135,36 +172,5 @@ export const mockNotifications = [
     read: true,
     link: "/dashboard/proyectos/proj_2",
     createdAt: new Date(Date.now() - 24 * 60 * 60 * 1000),
-  },
-]
-
-export const mockMembers = [
-  {
-    id: "member_1",
-    name: "Jefferson Mejia",
-    email: "jefferson@example.com",
-    role: "líder",
-    avatar: "JM",
-  },
-  {
-    id: "member_2",
-    name: "Carlos García",
-    email: "carlos@example.com",
-    role: "colaborador",
-    avatar: "CG",
-  },
-  {
-    id: "member_3",
-    name: "María López",
-    email: "maria@example.com",
-    role: "colaborador",
-    avatar: "ML",
-  },
-  {
-    id: "member_4",
-    name: "Juan Rodriguez",
-    email: "juan@example.com",
-    role: "revisor",
-    avatar: "JR",
   },
 ]
