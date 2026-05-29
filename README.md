@@ -1,33 +1,33 @@
 # acadproject-planeacion
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Este es un proyecto [Next.js](https://nextjs.org) inicializado con [v0](https://v0.app).
 
-## Built with v0
+## Construido con v0
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Este repositorio está vinculado a un proyecto [v0](https://v0.app). Puedes continuar desarrollando visitando el enlace a continuación -- inicia nuevos chats para hacer cambios, y v0 enviará commits directamente a este repositorio. Cada fusión a `main` se desplegará automáticamente.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_7q6vQeWTVJhHAl2JeuqykyrKev73)
+[Continuar trabajando en v0 →](https://v0.app/chat/projects/prj_7q6vQeWTVJhHAl2JeuqykyrKev73)
 
-## Getting Started
+## Comenzando
 
-First, run the development server:
+Primero, ejecuta el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
+# o
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Puedes comenzar a editar la página modificando `app/page.tsx`. La página se actualiza automáticamente mientras editas el archivo.
 
-## Learn More
+## Aprende Más
 
-To learn more, take a look at the following resources:
+Para aprender más, echa un vistazo a los siguientes recursos:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+- [Documentación de Next.js](https://nextjs.org/docs) - aprende sobre las características y API de Next.js.
+- [Aprende Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
+- [Documentación de v0](https://v0.app/docs) - aprende sobre v0 y cómo usarlo.
