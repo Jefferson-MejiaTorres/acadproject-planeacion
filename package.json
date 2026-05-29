@@ -1,6 +1,8 @@
 {
-  "name": "my-project",
+  "name": "acadproject-planeacion",
   "version": "0.1.0",
+  "description": "Plataforma de gestión y planificación de proyectos académicos colaborativos",
+  "author": "Jefferson David Mejia Torres",
   "private": true,
   "scripts": {
     "dev": "next dev",

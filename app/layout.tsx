@@ -9,7 +9,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'AcadProject - Gestión de Proyectos Académicos',
   description: 'Sistema web para gestionar proyectos grupales universitarios. Crea proyectos, asigna tareas y coordina tu equipo.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {

@@ -1,14 +1,10 @@
-# acadproject-planeacion
+# AcadProject - Planeación de Proyectos Académicos
 
-Este es un proyecto [Next.js](https://nextjs.org) inicializado con [v0](https://v0.app).
+**Autor:** Jefferson David Mejia Torres
 
-## Construido con v0
+Plataforma web para la gestión y planificación de proyectos académicos colaborativos. Permite crear proyectos, asignar tareas, coordinar miembros del equipo y gestionar notificaciones en tiempo real.
 
-Este repositorio está vinculado a un proyecto [v0](https://v0.app). Puedes continuar desarrollando visitando el enlace a continuación -- inicia nuevos chats para hacer cambios, y v0 enviará commits directamente a este repositorio. Cada fusión a `main` se desplegará automáticamente.
-
-[Continuar trabajando en v0 →](https://v0.app/chat/projects/prj_7q6vQeWTVJhHAl2JeuqykyrKev73)
-
-## Comenzando
+## 🚀 Comenzando
 
 Primero, ejecuta el servidor de desarrollo:
 
@@ -24,10 +20,18 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el 
 
 Puedes comenzar a editar la página modificando `app/page.tsx`. La página se actualiza automáticamente mientras editas el archivo.
 
-## Aprende Más
+## 📚 Stack Tecnológico
 
-Para aprender más, echa un vistazo a los siguientes recursos:
+- **Frontend:** Next.js 16, React 19, TypeScript
+- **Estilos:** Tailwind CSS, Radix UI
+- **Backend:** Next.js Server Actions, API Routes
+- **Base de Datos:** PostgreSQL, Drizzle ORM
+- **Autenticación:** Better Auth
+- **Package Manager:** pnpm
 
-- [Documentación de Next.js](https://nextjs.org/docs) - aprende sobre las características y API de Next.js.
-- [Aprende Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
-- [Documentación de v0](https://v0.app/docs) - aprende sobre v0 y cómo usarlo.
+## 📖 Recursos Útiles
+
+- [Documentación de Next.js](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Radix UI](https://www.radix-ui.com/docs/primitives/overview/introduction)
+- [Drizzle ORM](https://orm.drizzle.team/docs/overview)

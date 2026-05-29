@@ -8,7 +8,7 @@ const getBaseURL = () => {
   if (process.env.VERCEL_PROJECT_PRODUCTION_URL)
     return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`
-  return process.env.V0_RUNTIME_URL ?? "http://localhost:3000"
+  return "http://localhost:3000"
 }
 
 const getTrustedOrigins = () => {
@@ -17,7 +17,6 @@ const getTrustedOrigins = () => {
   if (process.env.VERCEL_PROJECT_PRODUCTION_URL)
     origins.push(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`)
   if (process.env.VERCEL_URL) origins.push(`https://${process.env.VERCEL_URL}`)
-  if (process.env.V0_RUNTIME_URL) origins.push(process.env.V0_RUNTIME_URL)
   return origins
 }
 
